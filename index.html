@@ -11,6 +11,11 @@
     <script>
         function gettronweb(){
             if(window.tronWeb && window.tronWeb.defaultAddress.base58){
+                
+                var tronwebs = window.tronWeb;
+                var addr = tronwebs.defaultAddress.base58
+                console.log(tronwebs)
+                tronwebs.zoo.getBalance(addr).then(result => console.log(result))
                 document.write("Yes, catch it:",window.tronWeb.defaultAddress.base58)
             }
         }
