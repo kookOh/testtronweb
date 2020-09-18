@@ -13,10 +13,12 @@
             if(window.tronWeb && window.tronWeb.defaultAddress.base58){
                 
                 var tronwebs = window.tronWeb;
+                console.log("tronwebs : " + tronwebs)
+                
                 var addr = tronwebs.defaultAddress.base58
                 console.log("addr : " + addr)
 
-                var bal = tronwebs.trx.getBalance(addr)
+                var bal = tronwebs.trx.getBalance()
                 console.log("bal : " + bal)
                 document.write("your addr : " + addr)
                 
